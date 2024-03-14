@@ -1,3 +1,4 @@
+frutas = ["maçã", "laranja", "uva", "pera"]
 
-# for carro in carros:
-#     print(carro,end=" ")
+print(frutas[0])  # maçã
+print(frutas[2])  # uva
