@@ -1,11 +1,17 @@
 def exibir_poema(data_extenso, *args, **kwargs):
+    import datetime
+    import locale
+    locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
     texto = "\n".join(args)
     meta_dados = "\n".join([f"{chave.title()}: {valor}" for chave, valor in kwargs.items()])
     mensagem = f"{data_extenso}\n\n{texto}\n\n{meta_dados}"
-    print(mensagem)
+    data = datetime.datetime.now()
+    data_atual = data.strftime("%A").capitalize() + data.strftime(", %d de %B de %Y - %H:%M") # tratado para o PT e "capitalizado"
+    print(data_atual ,mensagem)
 
 
 exibir_poema(
+    "",
     "Zen of Python",
     "Beautiful is better than ugly.",
     "Explicit is better than implicit.",
