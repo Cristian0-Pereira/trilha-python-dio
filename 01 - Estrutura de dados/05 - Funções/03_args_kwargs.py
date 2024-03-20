@@ -4,10 +4,10 @@ def exibir_poema(data_extenso, *args, **kwargs):
     locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
     texto = "\n".join(args)
     meta_dados = "\n".join([f"{chave.title()}: {valor}" for chave, valor in kwargs.items()])
-    mensagem = f"{data_extenso}\n\n{texto}\n\n{meta_dados}"
     data = datetime.datetime.now()
-    data_atual = data.strftime("%A").capitalize() + data.strftime(", %d de %B de %Y - %H:%M") # tratado para o PT e "capitalizado"
-    print(data_atual ,mensagem)
+    data_atual = data.strftime("%A").capitalize() + data.strftime(", %d de %B de %Y às %H:%M") # tratado para o PT e "capitalizado"
+    mensagem = f"{data_atual}{data_extenso}\n\n{texto}\n\n{meta_dados}"
+    print(mensagem)
 
 
 exibir_poema(
