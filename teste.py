@@ -1,9 +1,7 @@
-quantidade_passos = int(input())
-if quantidade_passos > 0:
-    for passo_atual in range(1, quantidade_passos + 1):
-        if passo_atual == 1:
-            print(f"Explorador: {passo_atual} passo")
-        else:
-            print(f"Explorador: {passo_atual} passos")
-elif quantidade_passos == 0:
-    print("Nenhum passo dado na floresta.")
+# Entrada dos valores da capacidade atual e do aumento percentual
+capacidade_atual, aumento_percentual = map(int, input().split())
+# Calcula a nova capacidade
+nova_capacidade = capacidade_atual + (capacidade_atual * aumento_percentual / 100)
+# Imprime a nova capacidade
+print(int(nova_capacidade))
+

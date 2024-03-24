@@ -1,0 +1,1 @@
+"Espada", "Escudo", "Poçao"
